@@ -1,0 +1,13 @@
+@import 'vendor/normalize';
+@import '../../node_modules/swiper/swiper';
+
+@import 'mixins';
+@import 'variables';
+
+@import 'fonts';
+@import 'general';
+
+@import 'blocks/cards';
+@import 'blocks/filter';
+@import 'blocks/select';
+@import 'blocks/card';

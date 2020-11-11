@@ -1,0 +1,50 @@
+.select {
+  position: relative;
+  display: none;
+  margin: 0 0 35px;
+  font-weight: 500;
+  user-select: none;
+
+  @include media('mobile') {
+    display: block;
+  }
+}
+
+.select__trigger {
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 19px;
+    height: 11px;
+    background: url("data:image/svg+xml,%3Csvg width='19' height='11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 1.5l-7.5 8-7.5-8' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    transition: 0.2s;
+
+    .select--open & {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.select__options {
+  display: none;
+  margin: 15px 0 0;
+  padding: 12px 0;
+  border-radius: 0 0 8px 8px;
+  background: #254595;
+}
+
+.select__option {
+  position: relative;
+  padding: 8px 40px 10px;
+
+  &--selected {
+    background: #3259b9
+      url("data:image/svg+xml,%3Csvg width='11' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.72 1.3c.3-.29.3-.76 0-1.05a.76.76 0 00-1.06 0l-5.1 5.03-2.28-2.25a.76.76 0 00-1.06 0c-.3.29-.3.76 0 1.05l2.81 2.78a.76.76 0 001.07 0l5.62-5.56z' fill='%23fff'/%3E%3C/svg%3E")
+      no-repeat 18px 50%;
+  }
+}

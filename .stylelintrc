@@ -1,0 +1,316 @@
+{
+  "ignoreFiles": ["**/*.js"],
+  "extends": ["stylelint-config-prettier"],
+  "plugins": ["stylelint-prettier", "stylelint-a11y", "stylelint-order"],
+  "rules": {
+    "color-hex-length": "short",
+    "color-named": "never",
+    "comment-whitespace-inside": "always",
+    "declaration-no-important": true,
+    "declaration-colon-space-before": "never",
+    "declaration-colon-space-after": "always",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": ["consecutive-duplicates-with-different-values"]
+      }
+    ],
+    "function-url-quotes": "always",
+    "font-weight-notation": "named-where-possible",
+    "font-family-name-quotes": "always-where-recommended",
+    "length-zero-no-unit": true,
+    "media-feature-range-operator-space-before": "always",
+    "media-feature-range-operator-space-after": "always",
+    "media-feature-parentheses-space-inside": "never",
+    "media-feature-colon-space-before": "never",
+    "media-feature-colon-space-after": "always",
+    "selector-no-qualifying-type": null,
+    "selector-combinator-space-after": "always",
+    "selector-attribute-quotes": "always",
+    "selector-attribute-operator-space-before": "never",
+    "selector-attribute-operator-space-after": "never",
+    "selector-attribute-brackets-space-inside": "never",
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"]
+      }
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "ignore": ["first-nested", "after-comment"],
+        "ignoreAtRules": ["import", "if", "else", "for", "return"]
+      }
+    ],
+    "selector-pseudo-element-colon-notation": "double",
+    "selector-pseudo-class-parentheses-space-inside": "never",
+    "unicode-bom": "never",
+    "order/order": [
+      "custom-properties",
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "font-size"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "media"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "placeholder"
+      },
+      {
+        "type": "rule",
+        "selector": "^&::before"
+      },
+      {
+        "type": "rule",
+        "selector": "^&::after"
+      },
+      {
+        "type": "rule",
+        "selector": "^&:\\w"
+      },
+      {
+        "type": "rule",
+        "selector": "^&--"
+      },
+      {
+        "type": "rule",
+        "selector": "^."
+      }
+    ],
+    "order/properties-order": [
+      [
+        {
+          "emptyLineBefore": "never",
+          "properties": [
+            "content",
+            "counter-reset",
+            "counter-increment",
+            "position",
+            "top",
+            "left",
+            "right",
+            "bottom",
+            "z-index"
+          ]
+        },
+        {
+          "emptyLineBefore": "never",
+          "properties": [
+            "display",
+            "visibility",
+            "float",
+            "clear",
+            "overflow",
+            "overflow-x",
+            "overflow-y",
+            "clip",
+            "zoom",
+            "flex-direction",
+            "flex-order",
+            "flex-pack",
+            "flex-align",
+            "flex",
+            "flex-wrap",
+            "flex-grow",
+            "flex-shrink",
+            "flex-basis",
+            "order",
+            "align-self",
+            "align-items",
+            "justify-content",
+            "gap",
+            "grid-gap",
+            "grid-template",
+            "grid-template-columns",
+            "grid-template-rows",
+            "grid-template-areas",
+            "box-sizing",
+            "width",
+            "min-width",
+            "max-width",
+            "height",
+            "min-height",
+            "max-height",
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left",
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left"
+          ]
+        },
+        {
+          "emptyLineBefore": "never",
+          "properties": [
+            "table-layout",
+            "empty-cells",
+            "caption-side",
+            "border-spacing",
+            "border-collapse",
+            "list-style",
+            "list-style-position",
+            "list-style-type",
+            "list-style-image",
+            "column-count",
+            "column-gap",
+            "object-fit",
+            "clip-path"
+          ]
+        },
+        {
+          "emptyLineBefore": "never",
+          "properties": [
+            "opacity",
+            "border",
+            "border-collapse",
+            "border-width",
+            "border-style",
+            "border-color",
+            "border-top",
+            "border-top-width",
+            "border-top-style",
+            "border-top-color",
+            "border-right",
+            "border-right-width",
+            "border-right-style",
+            "border-right-color",
+            "border-bottom",
+            "border-bottom-width",
+            "border-bottom-style",
+            "border-bottom-color",
+            "border-left",
+            "border-left-width",
+            "border-left-style",
+            "border-left-color",
+            "border-radius",
+            "border-top-left-radius",
+            "border-top-right-radius",
+            "border-bottom-right-radius",
+            "border-bottom-left-radius",
+            "border-image",
+            "border-image-source",
+            "border-image-slice",
+            "border-image-width",
+            "border-image-outset",
+            "border-image-repeat",
+            "outline",
+            "outline-width",
+            "outline-style",
+            "outline-color",
+            "outline-offset",
+            "background",
+            "background-color",
+            "background-image",
+            "background-repeat",
+            "background-attachment",
+            "background-position",
+            "background-position-x",
+            "background-position-y",
+            "background-clip",
+            "background-origin",
+            "background-size",
+            "box-decoration-break",
+            "box-shadow"
+          ]
+        },
+        {
+          "emptyLineBefore": "never",
+          "properties": [
+            "color",
+            "font",
+            "font-family",
+            "font-size",
+            "font-weight",
+            "font-style",
+            "font-variant",
+            "font-size-adjust",
+            "font-stretch",
+            "font-effect",
+            "font-emphasize",
+            "font-emphasize-position",
+            "font-emphasize-style",
+            "font-smooth",
+            "line-height",
+            "text-shadow",
+            "text-align",
+            "text-align-last",
+            "vertical-align",
+            "white-space",
+            "text-decoration",
+            "text-decoration-skip-ink",
+            "text-emphasis",
+            "text-emphasis-color",
+            "text-emphasis-style",
+            "text-emphasis-position",
+            "text-indent",
+            "text-justify",
+            "text-transform",
+            "letter-spacing",
+            "word-spacing",
+            "text-outline",
+            "text-transform",
+            "text-wrap",
+            "text-overflow",
+            "text-overflow-ellipsis",
+            "text-overflow-mode",
+            "word-wrap",
+            "word-break"
+          ]
+        },
+        {
+          "emptyLineBefore": "never",
+          "properties": [
+            "transition",
+            "transition-property",
+            "transition-duration",
+            "transition-timing-function",
+            "transition-delay",
+            "transform",
+            "transform-origin",
+            "animation",
+            "animation-name",
+            "animation-duration",
+            "animation-play-state",
+            "animation-timing-function",
+            "animation-delay",
+            "animation-iteration-count",
+            "animation-direction"
+          ]
+        },
+        {
+          "emptyLineBefore": "never",
+          "properties": [
+            "quotes",
+            "resize",
+            "cursor",
+            "user-select",
+            "nav-index",
+            "nav-up",
+            "nav-right",
+            "nav-down",
+            "nav-left",
+            "tab-size",
+            "hyphens",
+            "pointer-events"
+          ]
+        }
+      ],
+      {
+        "unspecified": "bottomAlphabetical"
+      }
+    ]
+  }
+}

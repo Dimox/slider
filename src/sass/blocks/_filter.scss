@@ -1,0 +1,45 @@
+.filter {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 30px;
+
+  @include media('tablet') {
+    margin-bottom: 15px;
+  }
+
+  @include media('mobile') {
+    display: none;
+  }
+}
+
+.filter__button {
+  margin: 0 15px 5px 0;
+  padding: 0;
+  padding: 6px 20px 8px;
+  border: none;
+  border-radius: 8px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 500;
+  transition: 0.2s;
+
+  &:not(.filter__button--active) {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background: #a5beff;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--active {
+    background: #80a0f2;
+  }
+}
